@@ -12,6 +12,12 @@ public class Pion {
         posx = new Point(aCopy.posx);
     }
 
+    public Pion clone() {
+        Pion p = new Pion(nom);
+        p.posx = posx.clone();
+        return p;
+    }
+
     public void setNom(String n) {
         nom = n;
     }

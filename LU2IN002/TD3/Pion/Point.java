@@ -11,6 +11,13 @@ public class Point {
         y = aCopy.y;
     }
 
+    public Point clone() {
+        Point p = new Point();
+        p.x = x;
+        p.y = y;
+        return p;
+    }
+
     public void bouger() {
         x = Math.random();
         y = Math.random();
