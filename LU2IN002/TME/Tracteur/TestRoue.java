@@ -8,7 +8,9 @@ public class TestRoue {
         Tracteur t1 = new Tracteur(r1, r2, r3, r4, c);
         System.out.println(t1.toString());
         Tracteur t2 = new Tracteur(t1);
+        Tracteur t3 = t1.clone();
         t2.peindre("blanc");
+        t3.peindre("noir");
         System.out.println(t1.toString());
         System.out.println(t2.toString());
     }
