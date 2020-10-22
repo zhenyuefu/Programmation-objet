@@ -26,7 +26,7 @@ public class Point {
         return posy;
     }
 
-    public String toString(){
-        return "(" + posx + "," + posy + ")"
+    public String toString() {
+        return "(" + posx + "," + posy + ")";
     }
 }
