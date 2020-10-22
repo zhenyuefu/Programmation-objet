@@ -36,6 +36,8 @@ public class NUplet {
     public boolean egal(NUplet n2) {
         if (n2 == null)
             return false;
+        if (this == n2)
+            return true;
         if (tab.length != n2.tab.length)
             return false;
         for (int i = 0; i < tab.length; i++) {
