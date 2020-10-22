@@ -1,1 +1,1 @@
-# Introduction à la programmation Orientée-objet
+# Introduction à la programmation-objet
