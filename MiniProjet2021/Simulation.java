@@ -4,6 +4,7 @@ public class Simulation {
     private Mineur[] mineur;
     private static final int NB_RESOURCE_MAX = 20;
 
+    /** Constructeur de ressource */
     public Simulation(int nbLigne, int nbColonne, int nbResource, int nbAgent) {
         terrain = new Terrain(nbLigne, nbColonne);
         ressource = new Ressource[nbResource];
@@ -24,6 +25,7 @@ public class Simulation {
         }
     }
 
+    /** Les mineurs se déplacent vers le point de ressources le plus proche */
     public void moveToRessource(Mineur m) {
         int x, y, minx = -1, miny = -1;
         double distance, minDistance = Double.POSITIVE_INFINITY;
@@ -41,6 +43,7 @@ public class Simulation {
             m.seDeplacer(minx, miny);
     }
 
+    /** Recueillir les ressources des mineurs */
     public void collectResource(Mineur m) {
         int x = m.getX();
         int y = m.getY();
@@ -58,6 +61,7 @@ public class Simulation {
 
     }
 
+    /** En une journée de simulation, les mineurs peuvent déplacer ou collecter */
     public void simulate() {
         int x, y;
         for (Mineur m : mineur) {
@@ -71,6 +75,7 @@ public class Simulation {
         }
     }
 
+    /** Afficher les ressources actuellement sur le terrain */
     public void show() {
         terrain.affiche();
         for (Ressource r : ressource) {
